@@ -1,0 +1,10 @@
+.ios body {
+  --ion-background-color: #37BD36;
+}
+
+#indexContainer {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
