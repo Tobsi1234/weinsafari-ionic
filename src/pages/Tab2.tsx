@@ -13,6 +13,7 @@ const Tab2: React.FC = () => {
       },
       language: "de"
     })
+
     var MarkerAnnotation = mapkit.MarkerAnnotation,
             clickAnnotation;
 
@@ -29,6 +30,10 @@ const Tab2: React.FC = () => {
       new mapkit.CoordinateSpan(0.0550, 0.0150)
     );*/
     var map = new mapkit.Map("map");
+    map.showsMapTypeControl = true;
+    map.showsPointsOfInterest = true;
+    map.showsUserLocation = true;
+    map.showsUserLocationControl = true;
     //map.region = Stuttgart;
     map.showItems([zaissAnnotation, warthAnnotation, currleAnnotation]);
 
