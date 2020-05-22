@@ -19,6 +19,7 @@
     "@types/react-router": "^5.1.4",
     "@types/react-router-dom": "^5.1.3",
     "ionicons": "^5.0.0",
+    "mapkit-typescript": "^5.18.2",
     "react": "^16.12.0",
     "react-dev-utils": "^10.2.0",
     "react-dom": "^16.12.0",
@@ -49,7 +50,6 @@
     ]
   },
   "devDependencies": {
-    "mapkit-typescript": "^5.18.2"
   },
   "description": "An Ionic project"
 }
