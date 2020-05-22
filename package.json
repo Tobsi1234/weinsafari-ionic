@@ -48,6 +48,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mapkit-typescript": "^5.18.2"
+  },
   "description": "An Ionic project"
 }

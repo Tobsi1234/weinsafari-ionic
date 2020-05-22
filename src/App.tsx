@@ -7,7 +7,8 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  setupConfig
+  setupConfig,
+  IonLabel
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { list, navigate } from 'ionicons/icons';
@@ -45,15 +46,26 @@ const App: React.FC = () => (
           <Route path="/index" component={Tab1} exact={true} />
           <Route path="/maps" component={Tab2} exact={true} />
           <Route path="/" render={() => <Redirect to="/index" />} exact={true} />
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/index">
-            <IonIcon icon={list} />
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/maps">
-            <IonIcon icon={navigate} />
-          </IonTabButton>
-        </IonTabBar>
+        </IonRouterOutlet> 
+        {window.innerWidth < 960 ? 
+          <IonTabBar slot="bottom">
+            <IonTabButton tab="tab1" href="/index">
+              <IonIcon icon={list} />
+            </IonTabButton>
+            <IonTabButton tab="tab2" href="/maps">
+              <IonIcon icon={navigate} />
+            </IonTabButton>
+          </IonTabBar>
+        : 
+          <IonTabBar slot="top">
+            <IonTabButton tab="tab1" href="/index">
+              <IonLabel>Home</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab2" href="/maps">
+              <IonLabel>Karte</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+        }
       </IonTabs>
     </IonReactRouter>
   </IonApp>
