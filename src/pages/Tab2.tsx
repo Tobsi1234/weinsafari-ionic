@@ -1,12 +1,12 @@
 import React from 'react';
-import { IonContent, IonPage, useIonViewDidEnter } from '@ionic/react';
+import { IonContent, IonPage, useIonViewWillEnter } from '@ionic/react';
 import './Tab2.css';
 
 // setting jwt publicly accessible is save when exp date and orgin is set
 var jwt = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjRYNVBVQ05aVjQifQ.eyJpc3MiOiI5N1I4NDg5RzdRIiwiaWF0IjoxNTkwMDAwMDAyLCJleHAiOjE2MDkzNzI4MDB9.3JLt5v00_o0HKieoum-9mVdLMcGPFjkWdUKHvQ1KnVu7Kc0v3E2qq1e540vrHgNL8N9kCyDpNEvXIDXhxV1Clw";
 
 const Tab2: React.FC = () => {
-  useIonViewDidEnter(() => {
+  useIonViewWillEnter(() => {
     mapkit.init({
       authorizationCallback: function(done) {
           done(jwt);
