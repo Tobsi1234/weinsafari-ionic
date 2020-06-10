@@ -7,15 +7,7 @@ var jwt = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjRYNVBVQ05aVjQifQ.eyJpc3
 
 const Tab2: React.FC = () => {
   useIonViewWillEnter(() => {
-    window.addEventListener('pageshow', function(event) {
-      // Safari cache bugfix
-      alert('Page was loaded from cache.');
-      initMap();
-    });
-    initMap();
-  });
-
-  function initMap() {
+    alert('Page was loaded from cache.');
     mapkit.init({
       authorizationCallback: function(done) {
           done(jwt);
@@ -45,7 +37,7 @@ const Tab2: React.FC = () => {
     map.showsUserLocationControl = true;
     //map.region = Stuttgart;
     map.showItems([zaissAnnotation, warthAnnotation, currleAnnotation]);
-  }
+  });
   
   return (
     <IonPage>
