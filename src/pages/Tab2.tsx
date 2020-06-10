@@ -7,7 +7,6 @@ var jwt = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjRYNVBVQ05aVjQifQ.eyJpc3
 
 const Tab2: React.FC = () => {
   useIonViewWillEnter(() => {
-    alert('Page was loaded from cache.');
     mapkit.init({
       authorizationCallback: function(done) {
           done(jwt);
