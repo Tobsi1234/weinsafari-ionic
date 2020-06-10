@@ -9,10 +9,8 @@ const Tab2: React.FC = () => {
   useIonViewWillEnter(() => {
     window.addEventListener('pageshow', function(event) {
       // Safari cache bugfix
-      if (event.persisted) {
-        alert('Page was loaded from cache.');
-        initMap();
-      }
+      alert('Page was loaded from cache.');
+      initMap();
     });
     initMap();
   });
